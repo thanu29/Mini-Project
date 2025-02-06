@@ -1,0 +1,243 @@
+-----HTML CODE :-
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel with Profiles</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-content">
+        <div class="carousel-item">
+          <h2> B.Thanusha Reddy</h2>
+          <p>
+            About me
+           <span>→→→</span>
+          </p>
+        </div>
+        <div class="carousel-item">
+          <h2>Education</h2>
+          <p>B.Tech-Sasi Institute of Technology and Engineering-Tadepalligudem</p>
+            <p> Computer Science and Engineering-AI&ML- 8.8
+          </p>
+          <br>
+          <p>Intermediate-Naryana Junior College ,Vijayawada - MPC - 95.7%</p>
+          <br>
+          <p>Geethanjali High School,Reddigudem - SSC - 9.71</p>
+        </div>
+        <div class="carousel-item">
+          <h2>Skills</h2>
+          <p>Basics in C, Python, Java, HTML & CSS, JavaScript,Basics in DBMS.</p>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="control" id="prev">&lt;</button>
+        <button class="control" id="next">&gt;</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Profile Links -->
+  <div class="profile-links">
+    <a href="https://www.linkedin.com/in/thanusha-reddy-9835b2280/" target="_blank">
+      <img src="https://tse1.mm.bing.net/th?id=OIP.aGsC0wuuVdQM3TNX4wIamgHaEK&pid=Api&P=0&h=180" alt="LinkedIn" title="LinkedIn">
+    </a>
+    <a href="https://github.com/thanu29" target="_blank">
+      <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Symbol.png" alt="GitHub" title="GitHub">
+    </a>
+    <a href="https://www.codechef.com/users/thanusha29" target="_blank">
+      <img src="https://tse3.mm.bing.net/th?id=OIP.uGvujCpH8kxrW6ebnufkwgHaDn&pid=Api&P=0&h=180" alt="CodeChef" title="CodeChef">
+    </a>
+  </div>
+  <div class="resume-link">
+    <a href="file:///C:/Users/B.Thanusha%20reddy/Downloads/My%20RESUME.pdf" target="_blank" class="resume-button">View My Resume</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+-------> CSS CODE :-
+
+        /* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: url('https://tse3.mm.bing.net/th?id=OIP.qAZajbEL863W8idv-dGA-AHaE4&pid=Api&P=0&h=180') no-repeat center center/cover;
+  color: #333;
+}
+
+/* Background Overlay for Readability */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: -1;
+}
+
+/* Carousel Styles */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.carousel {
+  width: 90%;
+  max-width: 800px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid black;
+  border-radius: 12px;
+  background-color: linen;
+}
+
+.carousel-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.carousel-item h2 {
+  margin: 0 0 20px;
+  font-size: 2em;
+}
+
+.carousel-item p {
+  margin: 0;
+  font-size: 1.2em;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item p span {
+  margin-left: 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.control {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5em;
+}
+
+.control:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Profile Links */
+.profile-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.profile-links a img {
+  width: 35px;
+  height: 30px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+.profile-links a img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+/* Resume Button Styles */
+.resume-link {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.resume-button {
+  text-decoration: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #45a049;
+}
+
+
+-------> JavaScript Code :-
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const carouselContent = document.querySelector(".carousel-content");
+  const slides = document.querySelectorAll(".carousel-item");
+  const prevButton = document.getElementById("prev");
+  const nextButton = document.getElementById("next");
+
+  let currentIndex = 0; // Index of the current slide
+
+  const updateCarousel = () => {
+    const slideWidth = slides[0].offsetWidth; // Get the width of a slide
+    carouselContent.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  };
+
+  // Go to the next slide
+  nextButton.addEventListener("click", () => {
+    if (currentIndex < slides.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0; // Loop back to the first slide
+    }
+    updateCarousel();
+  });
+
+  // Go to the previous slide
+  prevButton.addEventListener("click", () => {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = slides.length - 1; // Loop back to the last slide
+    }
+    updateCarousel();
+  });
+
+  // Adjust the carousel when the window is resized
+  window.addEventListener("resize", updateCarousel);
+});
