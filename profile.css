@@ -1,0 +1,135 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: url('https://tse3.mm.bing.net/th?id=OIP.qAZajbEL863W8idv-dGA-AHaE4&pid=Api&P=0&h=180') no-repeat center center/cover;
+  color: #333;
+}
+
+/* Background Overlay for Readability */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: -1;
+}
+
+/* Carousel Styles */
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.carousel {
+  width: 90%;
+  max-width: 800px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid black;
+  border-radius: 12px;
+  background-color: linen;
+}
+
+.carousel-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  text-align: center;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.carousel-item h2 {
+  margin: 0 0 20px;
+  font-size: 2em;
+}
+
+.carousel-item p {
+  margin: 0;
+  font-size: 1.2em;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item p span {
+  margin-left: 10px;
+  font-size: 1.5em;
+  color: #333;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.control {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5em;
+}
+
+.control:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Profile Links */
+.profile-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.profile-links a img {
+  width: 35px;
+  height: 30px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+.profile-links a img:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+/* Resume Button Styles */
+.resume-link {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.resume-button {
+  text-decoration: none;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #45a049;
+}
